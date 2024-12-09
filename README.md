@@ -1,18 +1,29 @@
-![Descripción alternativa](./assets/imagen.png)
+# Dockerización de una API en Java
 
-<p align="center">
-    <a href="https://youtube.com/@unprogramadornace" target="_blank"><img align="center" src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="@unprogramadornace" /></a>
-    <a href="https://www.linkedin.com/in/UnProgramadorNace"  target="_blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="@unprogramadornace"/></a>
-    <a href="https://www.facebook.com/people/Un-Programador-Nace/61552057605223/"  target="_blank"><img align="center" src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="@unprogramadornace" /></a>
-    <a href = "mailto:unprogramadornace@gmail.com" target="_blank"><img align="center" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="@unprogramadornace" /></a>
-</p>
+Este proyecto es una práctica basada en un tutorial para aprender a dockerizar una API desarrollada en Java utilizando un entorno de contenedores Docker. El objetivo es crear una imagen de Docker para la API y facilitar su despliegue y ejecución en cualquier entorno.
 
-# Spring Docker
+## Objetivos del proyecto
+- Configurar un entorno Docker para ejecutar una API desarrollada en Java.
+- Crear un `Dockerfile` optimizado para aplicaciones Java.
+- Implementar un archivo `docker-compose.yml` en caso de requerir servicios adicionales, como bases de datos.
+- Ejecutar y probar la API en un contenedor Docker.
 
-Muchas gracias por estar aquí, si te gusta mi contenido y son de gran utilidad para ti por favor ayudame dando tu valioso like al video y suscribiéndote al canal, ya que esto es de gran ayuda para mí y me motiva a seguir creando contenido de gran utilidad para ti.
+## Características principales
+1. **Configuración del Dockerfile**  
+   El `Dockerfile` incluye instrucciones para empaquetar la aplicación Java, especificar la versión del JDK y definir cómo se ejecutará la API dentro del contenedor.
 
-También me ayuda mucho si puedes marcar el repositorio con una estrella en la parte superior de la derecha, sería un gran detalle de tu parte.
+2. **Compatibilidad con servicios adicionales**  
+   Se incluye un archivo `docker-compose.yml` opcional para integrar otros servicios (bases de datos, sistemas de caché, etc.) de manera sencilla.
 
-Enlace al canal: https://www.youtube.com/channel/UCTXForyROk00E6jiaNKSV1A
+3. **Ejecución local en contenedor**  
+   La API dockerizada puede ejecutarse en el entorno local con comandos básicos de Docker y Docker Compose.
 
-Saludos!
+## Estructura del proyecto
+```plaintext
+├── src/                    # Código fuente de la API
+├── target/                 # Archivos generados tras la compilación (jar/war)
+├── pom.xml                 # Configuración de Maven
+├── Dockerfile              # Configuración para construir la imagen Docker
+├── docker-compose.yml      # Orquestación de servicios
+└── README.md               # Documentación del proyecto
+
